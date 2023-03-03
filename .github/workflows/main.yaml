@@ -6,6 +6,7 @@ on:
     branches:
       - master
       - main
+      - ci-cd-workflows
 
 jobs:
   flutter_test:

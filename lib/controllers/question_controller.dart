@@ -1,13 +1,12 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:get/state_manager.dart';
-import 'package:quiz_app/models/Questions.dart';
+// import 'package:quiz_app/models/Questions.dart';
 import 'package:quiz_app/screens/score/score_screen.dart';
 
 // We use get package for our state management
 
 class QuestionController extends GetxController
-    with SingleGetTickerProviderMixin {
+    with GetSingleTickerProviderStateMixin {
   // Lets animated our progress bar
 
   AnimationController _animationController;
