@@ -1,4 +1,3 @@
-name: CI
 on:
   pull_request:
     branches: -master
@@ -23,3 +22,19 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test
+      - run: flutter build apk
+        # This command builds an APK for Android
+      - name: Save APK artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: MyApp-Release-APK
+          path: build/app/outputs/flutter-apk/app-release.apk
+        # This step saves the APK as an artifact, which you can download later
+      - run: flutter build ios --no-codesign
+        # This command builds an IPA for iOS
+      - name: Save IPA artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: MyApp-Release-IPA
+          path: build/ios/archive/Runner.ipa
+        # This step saves the IPA as an artifact, which you can download later
