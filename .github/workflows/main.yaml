@@ -30,7 +30,7 @@ jobs:
           name: MyApp-Release-APK
           path: build/app/outputs/flutter-apk/app-release.apk
         # This step saves the APK as an artifact, which you can download later
-      - run: flutter build ios --no-codesign
+      - run: flutter build ios --release
         # This command builds an IPA for iOS
       - name: Save IPA artifact
         uses: actions/upload-artifact@v2
