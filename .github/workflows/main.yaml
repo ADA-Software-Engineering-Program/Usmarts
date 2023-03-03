@@ -30,11 +30,11 @@ jobs:
           name: MyApp-Release-APK
           path: build/app/outputs/flutter-apk/app-release.apk
         # This step saves the APK as an artifact, which you can download later
-      - run: flutter build ios
-        # This command builds an IPA for iOS
-      - name: Save IPA artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: MyApp-Release-IPA
-          path: build/ios/archive/Runner.ipa
-        # This step saves the IPA as an artifact, which you can download later
+      # - run: flutter build ios
+      #   # This command builds an IPA for iOS
+      # - name: Save IPA artifact
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: MyApp-Release-IPA
+      #     path: build/ios/archive/Runner.ipa
+      # This step saves the IPA as an artifact, which you can download later
