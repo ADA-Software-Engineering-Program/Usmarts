@@ -5,9 +5,10 @@ import 'package:quiz_app/controllers/question_controller.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ScoreScreen extends StatelessWidget {
+  const ScoreScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    QuestionController _qnController = Get.put(QuestionController());
+    final QuestionController _qnController = Get.put(QuestionController());
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
@@ -20,7 +21,7 @@ class ScoreScreen extends StatelessWidget {
                 "Score",
                 style: Theme.of(context)
                     .textTheme
-                    . displaySmall
+                    .headline3
                     .copyWith(color: kSecondaryColor),
               ),
               Spacer(),
@@ -39,3 +40,4 @@ class ScoreScreen extends StatelessWidget {
     );
   }
 }
+
